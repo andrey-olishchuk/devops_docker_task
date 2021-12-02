@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  frontend:
+    image: aolishchuk/fetest:v0.12
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "backend"
+  backend:
+    image: aolishchuk/betest:v0.11
+    ports:
+      - "5000:5000"
